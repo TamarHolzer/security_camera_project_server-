@@ -7,7 +7,7 @@ from functionsDB import camerasFunctionsDB
 
 
 
-def main(list_of_tuples_with_the_xy_cordinates=[(20,5),(25,8),(200,120)], heightOfRoomChosenByUser=2.50):
+def main(list_of_tuples_with_the_xy_cordinates=[(3,2),(3,9),( 1000,2),(1200,9)], heightOfRoomChosenByUser=2.50):
     numOfCameras = camerasFunctionsDB.get_all_cameras()
 
     NhD = 5 #מספר זוויות התקנה אופקיות
@@ -41,7 +41,7 @@ def main(list_of_tuples_with_the_xy_cordinates=[(20,5),(25,8),(200,120)], height
     sol = solveWithPulp.solve_with_pulp(NC=NC, NhD=NhD, NvD=NvD, NE=NE, NA=NA, NT=NT, CVR=CVR,  list_of_target_positions=target_points_list, List_of_possible_camera_locations=list_of_camera_positions)
     print(sol)
     return sol
-
+# main()
 
 
 
